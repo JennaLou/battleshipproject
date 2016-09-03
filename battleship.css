@@ -2,21 +2,25 @@ body {
     margin: 60px auto;
     width: 70%;
     max-width: 950px;
-    background-image: url(http://hdwallpaperbackgrounds.net/wp-content/uploads/2016/07/background-pictures-10.jpg);
+    background-image: url(http://hdwallpaperbackgrounds.net/wp-content/uploads/2016/07/black-background-Wallpapers-10.jpg);
     background-size: 100%;
 }
 
 h1 {
     font-size: 3em;
     font-family: 'Sigmar One', cursive;
+    font-variant-caps: titling-caps;
+    color: white;
+
 
 }
 
 p, button, input {
     font-size: 1.5em;
     line-height: 1.4em;
-    color: black;
+    color:black;
 	margin-bottom:1em;
+  font-family: 'Sigmar One', cursive;
 }
 
 #gameboard {
@@ -32,6 +36,7 @@ p, button, input {
 	-moz-box-sizing: border-box;    /* Firefox 1 - 28 */
 	box-sizing: border-box;         /* Safari 5.1+, Chrome 10+, Firefox 29+, Opera 7+, IE 8+, Android 4.0+, iOS any */
 	background: grey; /* Old browsers */
+  font-weight: bolder;
 	border: 1px solid #ddd;
 	width:50px;
 	height:50px;

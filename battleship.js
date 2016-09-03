@@ -60,8 +60,37 @@ var gameBoard = [
 				[1,0,0,0,0,0,0,0,0,0]
 				]
 
-function fireTorpedo() {
+    var shipsHit  = 0;
 
-	// Your game logic will go here!
+function fireTorpedo()
+{ var gameOver = false;
 
+	var userInput = $("Input").val();
+	var rowInput = userInput.substring(0,1);
+	var columnInput = userInput.substring(1,3);
+
+	var rowNumber = letterConversion[rowInput];
+	var columnNumber = columnInput - 1;
+	var coordinates = "s" + rowNumber + columnNumber;
+	var battleship = gameBoard[rowNumber][columnNumber];
+
+	if (battleship == 1)
+	{
+		$("#" + coordinates).css("background-color", "DeepPink");
+		shipsHit += 1;
+	}
+else {
+	$("#" + coordinates).css("background-color", "indigo");
+}
+
+console.log(coordinates);
+
+if(shipsHit == 1) {
+	gameOver = true;
+}
+
+if(gameOver){
+	$("#instructions").text("GAME OVER");
+	$("#inputBpx").fadeOut();
+  }
 }
