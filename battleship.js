@@ -60,37 +60,37 @@ var gameBoard = [
 				[1,0,0,0,0,0,0,0,0,0]
 				]
 
-    var shipsHit  = 0;
+		var shipsHit  = 0;
 
-function fireTorpedo()
-{ var gameOver = false;
+		function fireTorpedo()
+		{ var gameOver = false;
 
-	var userInput = $("Input").val();
-	var rowInput = userInput.substring(0,1);
-	var columnInput = userInput.substring(1,3);
+			var userInput = $("Input").val();
+			var rowInput = userInput.substring(0,1);
+			var columnInput = userInput.substring(1,3);
 
-	var rowNumber = letterConversion[rowInput];
-	var columnNumber = columnInput - 1;
-	var coordinates = "s" + rowNumber + columnNumber;
-	var battleship = gameBoard[rowNumber][columnNumber];
+			var rowNumber = letterConversion[rowInput];
+			var columnNumber = columnInput - 1;
+			var coordinates = "s" + rowNumber + columnNumber;
+			var battleship = gameBoard[rowNumber][columnNumber];
 
-	if (battleship == 1)
-	{
-		$("#" + coordinates).css("background-color", "red");
-		shipsHit += 1;
-	}
-else {
-	$("#" + coordinates).css("background-color", "HotPink");
-}
+			if (battleship == 1)
+			{
+				$("#" + coordinates).css("background-color", "red");
+				shipsHit += 1;
+			}
+		else {
+			$("#" + coordinates).css("background-color", "HotPink");
+		}
 
-console.log(coordinates);
+		console.log(coordinates);
 
-if(shipsHit == 1) {
-	gameOver = true;
-}
+		if(shipsHit == 1) {
+			gameOver = true;
+		}
 
-if(gameOver){
-	$("#instructions").text("GAME OVER!!!!!!");
-	$("#inputBox").fadeOut();
-  }
-}
+		if(gameOver){
+			$("#instructions").text("G A M E O V E R . . . ");
+			$("#inputBox").fadeOut();
+		  }
+		}
