@@ -76,11 +76,11 @@ function fireTorpedo()
 
 	if (battleship == 1)
 	{
-		$("#" + coordinates).css("background-color", "DeepPink");
+		$("#" + coordinates).css("background-color", "red");
 		shipsHit += 1;
 	}
 else {
-	$("#" + coordinates).css("background-color", "indigo");
+	$("#" + coordinates).css("background-color", "HotPink");
 }
 
 console.log(coordinates);
@@ -90,7 +90,7 @@ if(shipsHit == 1) {
 }
 
 if(gameOver){
-	$("#instructions").text("GAME OVER");
-	$("#inputBpx").fadeOut();
+	$("#instructions").text("GAME OVER!!!!!!");
+	$("#inputBox").fadeOut();
   }
 }
